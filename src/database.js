@@ -5,8 +5,8 @@ dotenv.config
 const connection = mysql.createConnection({
     host: process.env.host || "localhost", // Utiliza el valor de DB_HOST en el archivo .env o usa "localhost" por defecto
     database: process.env.database || "bicicletas", // Utiliza el valor de DB_DATABASE en el archivo .env o usa "bicicletas" por defecto
-    user: process.env.user, // Utiliza el valor de DB_USER en el archivo .env o usa "root" por defecto
-    password: process.env.password, // Utiliza el valor de DB_PASSWORD en el archivo .env o usa "1234" por defecto
+    user: process.env.user || "root", // Utiliza el valor de DB_USER en el archivo .env o usa "root" por defecto
+    password: process.env.password || "1234", // Utiliza el valor de DB_PASSWORD en el archivo .env o usa "1234" por defecto
 
 })
 
